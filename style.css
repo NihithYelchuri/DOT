@@ -34,7 +34,7 @@ body {
   width: 100%;
   max-width: 867px;
   margin: 25px 10px;
-  height: calc(100% - 50px);
+  /* height: calc(100% - 50px); */
   border: var(--border);
   border-radius: 5px;
   background: var(--msger-bg);
@@ -55,6 +55,7 @@ body {
 .msger-chat {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 10px;
 }
 .msger-chat::-webkit-scrollbar {
@@ -87,6 +88,10 @@ body {
   padding: 15px;
   border-radius: 15px;
   background: var(--left-msg-bg);
+  
+}
+#msg-bubble-left{
+  margin-right: 20%;
 }
 .msg-info {
   display: flex;
@@ -123,6 +128,7 @@ body {
   padding: 10px;
   border-top: var(--border);
   background: #eee;
+  
 }
 .msger-inputarea * {
   padding: 10px;
@@ -130,20 +136,31 @@ body {
   border-radius: 3px;
   font-size: 1em;
 }
+
+
+
+.msger-input:hover{
+  transform: scale(1.01);
+}
+
 .msger-input {
   flex: 1;
   background: #ddd;
 }
 .msger-send-btn {
   margin-left: 10px;
-  background: rgb(0, 196, 65);
-  color: #fff;
+  /* background: #579ffb; */
+  
+  /* color: #fff; */
   font-weight: bold;
   cursor: pointer;
   transition: background 0.23s;
 }
+
+
 .msger-send-btn:hover {
-  background: rgb(0, 180, 50);
+  background: #0072AB;
+  transform: scale(1.05);
 }
 
 .msger-chat {
@@ -153,3 +170,30 @@ body {
   background-position-x: center;
   background-position-y: center;
   }
+
+
+  .round{
+    border-radius: 50%;
+    /* background-color: blue; */
+    background-image: url("vvitprofile.jpeg");
+    height: 30px;
+    width: 60px;
+    
+}
+
+@media (max-width: 1500px) {
+  /* Styles to apply when the viewport width is 600px or less */
+  .msger{
+    margin: 0;
+    border: 0;
+    top:0;
+    max-width: none;
+  }
+  body{
+    align-items: stretch;
+  }
+
+  
+}
+
+
