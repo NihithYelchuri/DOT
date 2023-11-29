@@ -1,5 +1,7 @@
 import nltk
+import numpy as np
 nltk.download('popular')
+
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
